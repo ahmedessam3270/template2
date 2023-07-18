@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* header styling................................ */
+.main-header {
+  height: 15vh;
+}
+
+.header-content {
+  overflow: auto;
+  margin: 6vh 0;
+}
+
+.header-content img,
+.header-content nav ul {
+  float: left;
+}
+
+.header-content nav ul {
+    margin-left: 10px;
+}
+
+.header-icons {
+    float: right;
+    margin-top: 5px;
+}
+.header-content nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+.header-content nav ul li .template-link {
+  text-decoration: none;
+  color: #7b5244;
+  text-transform: capitalize;
+  line-height: 40px;
+  position: relative;
+  display: block;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-right: 14px;
+}
+
+.header-content nav ul li .template-link::before ,
+.header-content nav ul li .template-link::after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  left: 0;
+  top: 0;
+  transition: transform .4s;
+}
+
+.header-content nav ul li .template-link::before {
+  border-width: 0 2px;
+  height: 100%;
+  width: 95%;
+  transform: scale3d(1,0,1);
+}
+
+.header-content nav ul li .template-link:hover::before {
+  transform: scale3d(1,1,1);
+}
+
+.header-content nav ul li .template-link::after {
+  border-width: 2px 0px;
+  height: 91%;
+  width: 98%;
+  transform: scale3d(0,1,1);
+  transform-origin: left;
+}
+
+.header-content nav ul li .template-link:hover::after {
+  transform: scale3d(1,1,1);
+}
+
+
+
+.header-content .header-icons i {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.header-icons .zero-icon {
+    position: relative;
+}
+
+.header-icons .zero-icon::after {
+    position: absolute;
+    content: "0";
+    color: white;
+    background-color: #7b5244;
+    padding-top: 2px;
+    padding-left: 4px;
+    font-size: 16px;
+    top: 15px;
+    left: 33px;
+    height: 18px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.header-icons span {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+
+
+.furniture-table {
+  overflow: auto;
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  top: 105px;
+  left: 310px;
+  border: 2px solid #7b5244;
+  padding-top: 20px;
+
+  transform: scale(0); 
+  transition: transform 0.5s , visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: aliceblue;
+
+
+}
+
+.furniture-hover:hover + .furniture-table {
+  transform: scale(1); 
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.furniture-table:hover {
+  transform: scale(1); 
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.first-table {
+  margin-left: 8.5%;
+}
+
+.furniture-table-content {
+  float: left;
+  width: 30%;
+}
+
+.furniture-table-content a {
+  text-decoration: none;
+  color: #7b5244;
+  display: block;
+  text-transform: capitalize;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.furniture-table-content .tables-main-link {
+  border-bottom: .5px dashed #7b5244;
+  width: 46px;
+}
+
+/* main section.................................... */
+.study-table-content {
+  margin-top: 10px;
+}
+
+.main-pic .container img {
+  width: 100%;
+}
+
+
+/* special category section............................. */
+
+.section2 {
+  width: 100%;
+  /* height: 120vh; */
+}
+
+.internal-heading {
+  margin-top: 40px ;
+  text-align: center;
+  font-size: 25px;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.internal-heading .line{
+  display: block;
+  width: 100px;
+  margin: auto;
+  margin-top: 5px;
+  height: 2px;
+  background-color: #7b5244;
+  transition: width .5s;
+}
+.internal-heading:hover .line{
+  width: 150px;
+}
+
+.special-category-content {
+  display: grid;
+  grid-template-columns: repeat(4, 24.275%);
+  grid-template-rows: 1fr 300px;
+  row-gap: 40px ;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+
+.special-category-content .uppercard img {
+  width: 99%;
+}
+
+.uppercard-heading {
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.uppercard-heading p {
+  color: #7b5244;
+  font-size: 17px;
+}
+
+.uppercard-heading span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.uppercard .uppercard-heading i {
+  margin-left: 4px;
+  background-color: brown;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 12px;
+  font-size: 25px;
+  visibility: hidden;
+}
+
+.uppercard:hover  i {
+  visibility: visible;
+}
+
+.special-category-conclusion {
+  grid-column: 1/3;
+  background-color: #f7f3ef;
+}
+
+.conclusion-heading {
+  padding: 10px;
+  position: relative;
+}
+
+.conclusion-heading i {
+  color: #7b5244;
+  font-size: 50px;
+  position: absolute;
+
+}
+
+.conclusion-heading h2 {
+  display: inline-block;
+  font-size: 30px;
+  padding-left: 60px;
+}
+
+.conclusion-heading span {
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 70px;
+}
+
+.special-category-conclusion p {
+  margin-top: 30px;
+  padding-left: 10px;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.special-category-conclusion .bullet {
+  text-align: right;
+  margin-top: 30px;
+  margin-right: 20px;
+
+}
+
+.bullet span {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: #7b5244;
+  
+}
+
+.middle-bullet {
+  margin: 0 15px;
+}
+
+.card-img1 {
+  background-image: url(../Images/cms-banner-1.jpg);
+  background-size: cover;
+  margin: 0 10px;
+}
+
+.card-img2 {
+  background-image: url(../Images/cms-banner-2.jpg);
+  background-size: cover;
+}
+
+.img-card div  {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.img-card h3 {
+   color: #7b5244;
+   font-size: 22px;
+}
+
+.img-card {
+  transition: .5s;
+}
+
+.img-card:hover {
+  transform: scale(1.05);
+}
+
+/* animations........................................... */
+
+
+.animations {
+  margin-top: 30px;
+  display: flex;
+}
+
+.animation-item {
+  flex: 1;
+  text-align: center;
+  border-right: 2px solid #7b5244 ;
+}
+
+.animation-item:last-child {
+  border: none;
+}
+
+.moving-pic {
+  background-image: url(../Images/service-icon.png);
+  height: 55px;
+  background-repeat: no-repeat;
+}
+
+:-webkit-any(.animation-item) .moving-pic1 , .moving-pic2
+, .moving-pic3 , .moving-pic4 , .moving-pic5 {
+  transition: all .5s;
+}
+
+.moving-pic1 {
+  background-position: center 5px;
+}
+
+.animation-item:hover .moving-pic1 {
+  background-position: center -86px;
+}
+
+.moving-pic2 {
+  background-position: center -180px;
+}
+
+.animation-item:hover .moving-pic2 {
+  background-position: center -273px;
+}
+
+.moving-pic3 {
+  background-position: center -366px;
+}
+
+.animation-item:hover .moving-pic3 {
+  background-position: center -455px;
+}
+
+.moving-pic4 {
+  background-position: center -549px;
+}
+
+.animation-item:hover .moving-pic4 {
+  background-position: center -639px;
+}
+
+.moving-pic5 {
+  background-position: center -734px;
+}
+
+.animation-item:hover .moving-pic5 {
+  background-position: center -826px;
+}
+
+.container hr {
+  width: 100%;
+  margin: 40px auto;
+  color: #f7f3ef;
+}
+
+/* section3....................................................... */
+
+.section3 {
+  height: 200vh;
+  width: 100%;
+}
+
+.internal-span {
+  margin-top: 20px;
+}
+
+.internal-span span {
+  font-size: 17px;
+  display: inline-block;
+}
+
+.internal-span .middle-span1  {
+  margin: 0 30px;
+}
+
+.internal-span .middle-span2 {
+  margin-right: 30px;
+}
+
+/*.............section3-grid................................*/
+
+.chairs-main-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-template-rows: 500px;
+  column-gap: 2%;
+}
+
+.chairs-main-content {
+  /* width:; */
+}
+
+.chair-flip-img {
+  position: relative;
+}
+
+.front-image , .back-overlay {
+  position: absolute;
+}
+
+:-webkit-any(.front-image , .back-overlay ) img {
+  width: 100%;
+}
+
+.back-overlay {
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+
+
+.chair-flip-img:hover .back-overlay {
+   transform: scale(1);
+}
+
+.chair-stars {
+  position: relative;
+  top: 430px;
+}
+
+.chair-stars i {
+  color: #FFFF00;
+}
+
+.chair-stars .emp-star {
+  color: #000;
+}
+
+.chair-stars p {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 4px 0;
+}
+
+.chair-stars h3 {
+  font-size: 22px;
+}
+
+.float-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.float-icons i {
+  background-color: #7b5244;
+  color: #f7f3ef;
+  font-size: 20px;
+  line-height: 40px;
+  width: 40px;
+  padding-left: 10px;
+}
